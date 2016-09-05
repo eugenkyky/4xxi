@@ -11,17 +11,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password qwer1234'
 sudo apt-get install mysql-server -y &&
 sudo apt-get install mysql-client -y &&
-
-'''
-    Требования к скрипту
-
-    1. Установка сифони
-    2. Скачивание приложения
-    3. Миграция
-    4. Запуск
-'''
-
-git clone https://github.com/eugenkyky/test_repo.git test_assignment &&
+git clone https://github.com/eugenkyky/4xxi.git test_assignment &&
 #composer get additional packages
 cd test_assignment &&
 sudo chown vagrant tests &&
