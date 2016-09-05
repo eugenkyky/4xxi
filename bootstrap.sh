@@ -14,9 +14,9 @@ sudo apt-get install mysql-client -y &&
 git clone https://github.com/eugenkyky/4xxi.git test_assignment &&
 #composer get additional packages
 cd test_assignment &&
+mysql -uroot -pqwer1234 -e "CREATE DATABASE symfony;" &&
 sudo composer install &&
 #install db scheme
-mysql -uroot -pqwer1234 -e "CREATE DATABASE symfony;" &&
 #create schema
 sudo php bin/console doctrine:schema:update --force
 sudo php bin/console server:run
