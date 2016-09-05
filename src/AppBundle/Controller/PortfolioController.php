@@ -100,7 +100,7 @@ class PortfolioController extends Controller
                     $startDate = (new \DateTime('now'))->modify('-'.($i + 1).' years');
                     $endDate = (new \DateTime('now'))->modify('-'.$i.' years');
                     //Убираем пересечение дат
-                    if (1 == $i) {
+                    if (1 === $i) {
                         $endDate = $endDate->modify('-1 day');
                     }
 
