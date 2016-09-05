@@ -19,7 +19,7 @@ sudo composer install &&
 #install db scheme
 #create schema
 sudo php bin/console doctrine:schema:update --force
-sudo php bin/console server:run
+sudo php bin/console server:run 0.0.0.0:8000
 echo "Deploy task succeded" &&
 exit 0
 
