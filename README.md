@@ -22,14 +22,14 @@ $ vagrant up
 Так же использовал https://developers.google.com/chart/ для отображения истории общей стоимости портфеля на клиенте.
 
 ## Затраченное время
-3 часа PSR-0 PSR-1 PSR-2 PSR-4, Symfony Coding Standards
-1 час знакомст с Symfony
-1 час кодил hello world
-1 час чтение документации secutiry
-1 час Настройка FOSuserbundle
-1.5 часа ORM + MYSQL + check login, register
-1 час чтение документации форм
-1 час - знакомство relations + entity 
-1 час - знакомство с yahoo api
-15 часов кодил функционал
-3 часа оформление ТЗ
+3 часа PSR-0 PSR-1 PSR-2 PSR-4, Symfony Coding Standards  
+1 час знакомст с Symfony  
+1 час кодил hello world  
+1 час чтение документации secutiry  
+1 час Настройка FOSuserbundle  
+1.5 часа ORM + MYSQL + check login, register  
+1 час чтение документации форм  
+1 час - знакомство relations + entity  
+1 час - знакомство с yahoo api  
+15 часов кодил функционал  
+3 часа оформление ТЗ  
