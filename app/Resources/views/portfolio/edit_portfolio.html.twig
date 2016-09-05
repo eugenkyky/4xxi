@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Редактирование портфеля</h3>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+    {{ form_end(edit_form) }}
+
+{% endblock %}

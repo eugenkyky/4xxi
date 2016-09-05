@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+    <a href="{{ path('create_portfolio') }}" >Создать новый портфель</a><br><br>
+    <a>Список портфелей:</a>
+    {% if portfolios %}
+        <ul>
+            {% for portfolio in portfolios %}
+                <li><a href="{{ path('show_portfolio', {'portfolio': portfolio.id}, false) }}">
+                    {{ portfolio.name }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <br>
+        Портфелей пока нет
+    {% endif %}
+ {% endblock %}

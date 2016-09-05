@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Stock edit</h1>
+    Пример названия: IBM, AAPL, YHOO, GOOGL, ORCL
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    {{ form_end(edit_form) }}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        Акции организации: {{ stock.name }}<br>
+        Название: {{ stock.symbol }}
+        В количестве: {{ stock.amount }}
+        Портфель {{ stock.portfolio.name }}
+
+        <ul>
+            <li>
+                <a href="{{ path('stock_edit', { 'stock': stock.id }) }}">Править</a>
+            </li>
+            <li>
+                <a href="{{ path('stock_delete', { 'stock': stock.id }) }}">Удалить</a>
+            </li>
+        </ul>
+
+    {% endblock %}

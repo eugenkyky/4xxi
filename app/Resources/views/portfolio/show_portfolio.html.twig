@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        <h3>Портфель "{{ portfolio.name }}"</h3>
+        <a href="{{ path('show_portfolio_history', {'portfolio': portfolio.id}, false) }}">Посмотреть Историю</a><br><br>
+        <a href="{{ path('create_stock', {'portfolio': portfolio.id}, false) }}">Добавить акцию</a><br><br>
+        <a>Список акций:</a>
+        {% if portfolio.stocks is empty%}
+            <br>Акций в портфеле нет
+        {% else %}
+            <ul>
+                {% for stock in portfolio.stocks %}
+                    <li><a href="{{ path('show_stock', {'stock': stock.id}, false) }}">{{ stock.name }} [{{ stock.symbol }}] в количестве {{ stock.amount }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <br>
+        <br>
+        <a href="{{ path('portfolio_edit', { 'portfolio': portfolio.id }) }}">Править порфтель</a>
+        <br>
+        <a href="{{ path('portfolio_delete', { 'portfolio': portfolio.id }) }}">Удалить портфель</a>
+        <br>
+        <a href="{{ path('list_portfolios' ) }}">Назад</a>
+    {% endblock %}

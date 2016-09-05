@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        Успешно добавлены акции в портфель {{ stock.portfolio.name }} в количестве {{ stock.amount }} c названием {{ stock.name }} и символом {{ stock.symbol }}
+        <br>
+        <br>
+        <a href="{{ path('show_portfolio', { 'portfolio': stock.portfolio.id }) }}">Назад</a>
+    {% endblock %}
