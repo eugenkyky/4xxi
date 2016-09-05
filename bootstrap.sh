@@ -14,7 +14,6 @@ sudo apt-get install mysql-client -y &&
 git clone https://github.com/eugenkyky/4xxi.git test_assignment &&
 #composer get additional packages
 cd test_assignment &&
-sudo chown vagrant tests &&
 sudo composer install &&
 #install db scheme
 mysql -uroot -pqwer1234 -e "CREATE DATABASE symfony;" &&
