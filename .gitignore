@@ -14,7 +14,7 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-
+./.idea
 # Cache and logs (Symfony2)
 /app/cache/*
 /app/logs/*
@@ -64,6 +64,5 @@
 # Backup entities generated with doctrine:generate:entities command
 */Entity/*~
 .idea/vcs.xml
-bootstrap.sh
 src/AppBundle/Entity/Stock.php~
 src/AppBundle/Tests/
