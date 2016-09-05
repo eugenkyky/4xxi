@@ -4,8 +4,6 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 /**
  * @ORM\Entity
@@ -24,7 +22,6 @@ class Stock
      * @ORM\Column(type="string", length=50))
      */
     protected $name;
-
 
     /**
      * @Assert\NotBlank()
@@ -45,9 +42,9 @@ class Stock
     protected $portfolio;
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -55,7 +52,7 @@ class Stock
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -69,7 +66,7 @@ class Stock
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -79,7 +76,7 @@ class Stock
     }
 
     /**
-     * Set symbol
+     * Set symbol.
      *
      * @param string $symbol
      *
@@ -93,7 +90,7 @@ class Stock
     }
 
     /**
-     * Get symbol
+     * Get symbol.
      *
      * @return string
      */
@@ -102,11 +99,8 @@ class Stock
         return $this->symbol;
     }
 
-
-
-
     /**
-     * Set amount
+     * Set amount.
      *
      * @param int $amount
      *
@@ -120,7 +114,7 @@ class Stock
     }
 
     /**
-     * Get amount
+     * Get amount.
      *
      * @return int
      */
@@ -130,7 +124,7 @@ class Stock
     }
 
     /**
-     * Set portfolio
+     * Set portfolio.
      *
      * @param Portfolio $portfolio
      *
@@ -144,7 +138,7 @@ class Stock
     }
 
     /**
-     * Set portfolio
+     * Set portfolio.
      *
      * @return Portfolio
      */

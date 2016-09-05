@@ -36,9 +36,9 @@ class Portfolio
     }
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -46,7 +46,7 @@ class Portfolio
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -60,7 +60,7 @@ class Portfolio
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */
@@ -70,11 +70,12 @@ class Portfolio
     }
 
     /**
-     * Get stocks
+     * Get stocks.
      *
      * @return array
      */
-    public function getStocks() {
+    public function getStocks()
+    {
         return $this->stocks;
     }
 }

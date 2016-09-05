@@ -97,19 +97,19 @@ class PortfolioController extends Controller
             foreach ($stocks as $stock) {
                 for ($i = 0; $i < 2; ++$i) {
                     //Окно в один год
-                    $startDate = (new \DateTime('now'))->modify('-' . ($i + 1) . ' years');
-                    $endDate = (new \DateTime('now'))->modify('-' . $i . ' years');
+                    $startDate = (new \DateTime('now'))->modify('-'.($i + 1).' years');
+                    $endDate = (new \DateTime('now'))->modify('-'.$i.' years');
                     //Убираем пересечение дат
-                    if ( 1 == $i ) {
+                    if (1 == $i) {
                         $endDate = $endDate->modify('-1 day');
                     }
 
                     $client = $this->get('guzzle.client.api_crm');
-                    $response = $client->get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.' .
-                        'historicaldata%20where%20symbol%20=%20"'.$stock->getSymbol().'"%20and%20startDate%20%3D%20%22' .
-                        $startDate->format('Y-m-d') .
-                        '%22%20and%20endDate%20%3D%20%22' .
-                        $endDate->format('Y-m-d') . '%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=');
+                    $response = $client->get('https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.'.
+                        'historicaldata%20where%20symbol%20=%20"'.$stock->getSymbol().'"%20and%20startDate%20%3D%20%22'.
+                        $startDate->format('Y-m-d').
+                        '%22%20and%20endDate%20%3D%20%22'.
+                        $endDate->format('Y-m-d').'%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=');
 
                     if (200 === $response->getStatusCode()) {
                         $response = json_decode($response->getBody(), true);
@@ -118,9 +118,9 @@ class PortfolioController extends Controller
                             $logger->info($quote['Close']);
 
                             if (empty($resultArray[$quote['Date']])) {
-                                $resultArray[$quote['Date']] = ($quote['Close']*$stock->getAmount());
+                                $resultArray[$quote['Date']] = ($quote['Close'] * $stock->getAmount());
                             } else {
-                                $resultArray[$quote['Date']] += ($quote['Close']*$stock->getAmount());
+                                $resultArray[$quote['Date']] += ($quote['Close'] * $stock->getAmount());
                             }
                         }
                     }
