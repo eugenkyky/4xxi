@@ -7,7 +7,7 @@
 $ cd ~
 $ mkdir test_assignment
 $ cd test_assignment
-$ wget 'https://raw.githubusercontent.com/eugenkyky/4xxi/master/deploy.sh'
+$ wget 'https://raw.githubusercontent.com/eugenkyky/4xxi/master/bootstrap.sh'
 $ wget 'https://raw.githubusercontent.com/eugenkyky/4xxi/master/Vagrantfile'
 $ vagrant box add hashicorp/precise64
 $ vagrant up
