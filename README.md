@@ -7,16 +7,15 @@
 $ cd ~
 $ mkdir test_assignment
 $ cd test_assignment
-$ wget 'https://raw.githubusercontent.com/eugenkyky/geo_test/master/deploy.sh'
-$ wget 'https://raw.githubusercontent.com/eugenkyky/geo_test/master/Vagrantfile'
+$ wget 'https://raw.githubusercontent.com/eugenkyky/4xxi/master/deploy.sh'
+$ wget 'https://raw.githubusercontent.com/eugenkyky/4xxi/master/Vagrantfile'
 $ vagrant box add hashicorp/precise64
 $ vagrant up
 ```
 
 ## Использование
 После того, как развернется окружение (код деплоя можно посмотреть в ```deploy.sh```) 
-можно обратиться к серверу и проверить работу ТЗ, путем обращения в браузере к адресу ```http://127.0.0.1:4567/register/```
-Зарегистрироваться и перейти к ```http://127.0.0.1:4567``` для проверки функционала ТЗ
+необходимо обратиться к адресу ```http://127.0.0.1:4567/register/``` зарегистрироваться и перейти к ```http://127.0.0.1:4567``` для проверки функционала ТЗ
 
 ## Сторонние библиотеки
 Использовал дополнительно два бандла: friendsofsymfony/user-bundle и eightpoints/guzzle-bundle. Первый для регистрации/авторизации пользователя, второй для обращения к внешнему сервису.
