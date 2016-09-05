@@ -69,7 +69,7 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
 
-  config.vm.provision :shell, path: "deploy.sh"
+  config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.network :forwarded_port, guest: 8000, host: 4567
 
 end

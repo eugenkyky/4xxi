@@ -17,10 +17,10 @@ cd test_assignment &&
 sudo chown vagrant tests &&
 sudo composer install &&
 #install db scheme
-mysql -uroot -pqwer1234 -e "CREATE DATABASE 4xii;" &&
+mysql -uroot -pqwer1234 -e "CREATE DATABASE symfony;" &&
 #create schema
-php bin/console doctrine:schema:update --force
-php bin/console server:run
+sudo php bin/console doctrine:schema:update --force
+sudo php bin/console server:run
 echo "Deploy task succeded" &&
 exit 0
 
